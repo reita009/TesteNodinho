@@ -1,12 +1,5 @@
 require("dotenv").config();
 
-const envData = {
-  host: process.env.MYSQLHOST,
-  user: process.env.MYSQLUSER,
-  password: process.env.MYSQL_ROOT_PASSWORD,
-  database: process.env.MYSQL_DATABASE,
-};
-
 const knex = require("knex")({
   client: "mysql2",
   connection: {

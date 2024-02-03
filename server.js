@@ -8,7 +8,7 @@ var dados = {
   password: "12345",
   role: "admin",
 };
-
+/*
 database
   .insert(dados)
   .into("users")
@@ -17,10 +17,10 @@ database
   })
   .catch((err) => {
     console.log(`algo deu errado: ${err}`);
-  });
+  });*/
 
 app.get("/", (req, res) => {
-  res.send(envTeste);
+  res.send("ola");
 });
 
 app.listen(process.env.PORT || 8081, () => {
