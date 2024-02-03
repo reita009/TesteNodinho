@@ -20,7 +20,15 @@ database
   });*/
 
 app.get("/", (req, res) => {
-  res.send("ola");
+  database
+    .select()
+    .table("users")
+    .then((data) => {
+      res.send(data);
+    })
+    .catch((err) => {
+      console.log(`erro : ${err}`);
+    });
 });
 
 app.listen(process.env.PORT || 8081, () => {
