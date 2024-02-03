@@ -25,6 +25,7 @@ app.get("/", (req, res) => {
     .table("users")
     .then((data) => {
       res.send(data);
+      console.log("Deu certo");
     })
     .catch((err) => {
       console.log(`erro : ${err}`);
